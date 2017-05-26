@@ -4,8 +4,9 @@
 %  ------------
 %
 %  This file contains code that helps you get started on the
-%  linear exercise. You will need to complete the following functions
-%  in this exericse:
+%  linear regression exercise. 
+%
+%  You will need to complete the following functions in this exercise:
 %
 %     warmUpExercise.m
 %     plotData.m
@@ -27,6 +28,7 @@
 clear ; close all; clc
 
 %% ==================== Part 1: Basic Function ====================
+
 % Complete warmUpExercise.m
 fprintf('Running warmUpExercise ... \n');
 fprintf('5x5 Identity Matrix: \n');
@@ -37,6 +39,7 @@ pause;
 
 
 %% ======================= Part 2: Plotting =======================
+
 fprintf('Plotting Data ...\n')
 data = load('ex1data1.txt');
 X = data(:, 1); y = data(:, 2);
@@ -100,6 +103,7 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% ============= Part 4: Visualizing J(theta_0, theta_1) =============
+
 fprintf('Visualizing J(theta_0, theta_1) ...\n')
 
 % Grid over which we will calculate J
@@ -116,7 +120,6 @@ for i = 1:length(theta0_vals)
 	  J_vals(i,j) = computeCost(X, y, t);
     end
 end
-
 
 % Because of the way meshgrids work in the surf command, we need to
 % transpose J_vals before calling surf, or else the axes will be flipped
